@@ -16,7 +16,7 @@ const List: React.FC<{ onSelect: (pokemon: Pokemon) => void }> = ({ onSelect }) 
   const [searchQuery, setSearchQuery] = useState<string>('');
 
   useEffect(() => {
-    axios.get('https://pokeapi.co/api/v2/pokemon?limit=800').then((response) => {
+    axios.get('https://pokeapi.co/api/v2/pokemon?limit=1025').then((response) => {
       setPokemonList(response.data.results);
     });
   }, []);
